@@ -71,10 +71,10 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
               <SidebarMenuItem>
                 <SidebarMenuButton
                   asChild
-                  isActive={pathname === "/articles"}
+                  isActive={pathname === "/"}
                   className="text-white hover:bg-purple-800/20 transition-colors"
                 >
-                  <Link href="/articles" className="flex items-center gap-2 px-3 py-2">
+                  <Link href="/" className="flex items-center gap-2 px-3 py-2">
                     <FileText className="size-4 flex-shrink-0" />
                     <span>Articles</span>
                     <ChevronDown className="ml-auto h-4 w-4 text-gray-400" />
