@@ -9,10 +9,10 @@ interface DashboardHeaderProps {
   children?: React.ReactNode
 }
 
-export function DashboardHeader({ heading, text, children }: DashboardHeaderProps) {
+export function DashboardHeader({ heading = "Article", text = "Manage and monitor your content", children }: DashboardHeaderProps) {
   return (
     <motion.div
-      className="flex flex-col gap-1 md:flex-row md:items-center md:justify-between mb-8"
+      className="sticky top-0 z-50 flex flex-col gap-2 md:flex-row md:items-center md:justify-between p-4 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}

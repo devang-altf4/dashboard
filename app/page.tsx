@@ -9,7 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 export default function DashboardPage() {
   return (
     <DashboardShell>
-      <DashboardHeader heading="Articles" text="Manage and monitor your content."></DashboardHeader>
+      
       <Tabs defaultValue="generated" className="w-full">
         <TabsList className="mb-4">
           <TabsTrigger

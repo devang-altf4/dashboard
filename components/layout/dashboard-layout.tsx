@@ -34,6 +34,7 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
+import { DashboardHeader } from "@/components/dashboard/dashboard-header"
 
 export function DashboardLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
@@ -193,16 +194,9 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
       </Sidebar>
       <SidebarInset>
         <div className="flex flex-col min-h-screen bg-background">
-          <header className="flex h-14 lg:h-16 items-center gap-4 border-b border-purple-800 bg-card px-6">
+          <DashboardHeader heading="Articles" text="Manage and monitor your content">
             <SidebarTrigger className="text-secondary hover:bg-primary/20" />
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-lg font-semibold ml-2 text-white"
-            >
-              Articles
-            </motion.div>
-          </header>
+          </DashboardHeader>
           <main className="flex-1 p-6">
             {mounted && (
               <AnimatePresence mode="wait">
